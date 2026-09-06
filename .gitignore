@@ -1,0 +1,9 @@
+# Este repositorio es público: acá adentro sólo va lo que cualquiera puede ver.
+gestion.html
+version.json
+*.mjs
+paquetes.js
+grupales.js
+studio.html
+.vercel
+.env*

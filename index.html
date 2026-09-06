@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azimut Viajes — Salidas grupales acompañadas</title>
+<meta name="description" content="Salidas grupales acompañadas desde Buenos Aires, con el precio a la vista y operador habilitado. Europa, Egipto y Auroras Boreales.">
+<meta name="theme-color" content="#102A43">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23102A43%22/><circle cx=%2250%22 cy=%2250%22 r=%2234%22 fill=%22none%22 stroke=%22%23F8F4EC%22 stroke-width=%225%22/><line x1=%2250%22 y1=%2250%22 x2=%2270%22 y2=%2224%22 stroke=%22%23B87333%22 stroke-width=%226%22 stroke-linecap=%22round%22/><circle cx=%2250%22 cy=%2250%22 r=%224%22 fill=%22%23F8F4EC%22/></svg>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Azimut Viajes">
+<meta property="og:title" content="Salidas grupales acompañadas, con el precio a la vista">
+<meta property="og:description" content="Nosotros garantizamos y gestionamos; el viaje te lo factura el operador. A nosotros no nos pagás nada. Te decimos para quién sí y para quién no es cada viaje.">
+<meta property="og:url" content="https://agencia-prueba.vercel.app/">
+<meta property="og:image" content="https://image.pollinations.ai/prompt/calm%20dark%20ocean%20at%20night%20under%20starry%20sky%2C%20deep%20navy%20blue%2C%20minimalist%2C%20lone%20sailboat%20light%2C%20copper%20moon%20glow?width=1200&height=630&seed=38&nologo=true">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","name":"Azimut Viajes","description":"Viajes curados con precio a la vista. Tu viaje, con rumbo verificado.","areaServed":"AR"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#102A43; --abisal:#0B1D2E; --marfil:#F8F4EC; --cobre:#B87333;
+  --cobre-accion:#A05A1F; --cobre-prof:#8C5620; --grafito:#4A5568; --luna:#A9B4C2;
+  --linea:rgba(248,244,236,.10); --linea-marfil:rgba(16,42,67,.12);
+  --disp:"Manrope",sans-serif; --sans:"Inter",-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--azul); color:var(--marfil); font-family:var(--sans);
+  font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  background-image:linear-gradient(var(--linea) 1px,transparent 1px),linear-gradient(90deg,var(--linea) 1px,transparent 1px);
+  background-size:96px 96px;
+}
+h1,h2,h3{font-family:var(--disp); letter-spacing:-.02em; line-height:1.1}
+a{color:inherit; text-decoration:none}
+button{font-family:var(--sans); cursor:pointer}
+.num{font-family:var(--sans); font-variant-numeric:tabular-nums; font-feature-settings:"zero" 1}
+.wrap{max-width:1200px; margin:0 auto; padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 64px}}
+section{padding-top:64px}
+@media(max-width:760px){section{padding-top:44px}}
+.label{font-size:.68rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--luna)}
+.label.cobre{color:var(--cobre)}
+.wp{display:block; margin-bottom:18px}
+
+/* ===== Botones ===== */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  background:var(--cobre-accion); color:var(--marfil); border:none; padding:14px 26px;
+  border-radius:99px; font-weight:600; font-size:.95rem; transition:background .25s, transform .3s var(--ease)}
+.btn:hover{background:#8C4E1B; transform:translateY(-2px)}
+.btn.ghost{background:transparent; border:1px solid var(--linea); color:var(--marfil)}
+.btn.ghost:hover{border-color:var(--cobre); background:transparent}
+.btn.sm{padding:10px 18px; font-size:.85rem}
+.marfil-zone .btn.ghost{border-color:var(--linea-marfil); color:var(--azul)}
+
+/* ===== Header instrumento ===== */
+header{position:sticky; top:0; z-index:50; background:rgba(11,29,46,.92);
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--linea)}
+.hd{height:56px; display:flex; align-items:center; gap:22px; max-width:1200px; margin:0 auto; padding:0 20px}
+@media(min-width:900px){.hd{padding:0 64px}}
+.brand{display:flex; align-items:center; gap:10px; font-family:var(--disp); font-weight:700; font-size:1.1rem; letter-spacing:.04em}
+.brand svg{width:28px; height:28px}
+.hd nav{display:none; gap:26px; margin-left:12px}
+@media(min-width:900px){.hd nav{display:flex}}
+.hd nav a{font-size:.68rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--luna); transition:color .2s}
+.hd nav a:hover{color:var(--marfil)}
+.hd .lectura{margin-left:auto; font-size:.72rem; color:var(--luna); display:none}
+@media(min-width:760px){.hd .lectura{display:block}}
+.hd .btn{margin-left:auto}
+@media(min-width:760px){.hd .btn{margin-left:18px}}
+
+/* ===== Hero WP-01 ===== */
+.hero{position:relative; min-height:88svh; display:flex; align-items:center; overflow:hidden}
+.hero-arc{position:absolute; right:-18vw; top:50%; transform:translateY(-50%); width:74vw; max-width:900px; aspect-ratio:1; pointer-events:none}
+@media(max-width:760px){.hero-arc{width:120vw; right:-55vw; opacity:.75}}
+.hero-arc circle.anillo{fill:none; stroke:var(--linea); stroke-width:1.5}
+.hero-arc line.aguja{stroke:var(--cobre); stroke-width:2}
+.hero-arc circle.punta{fill:var(--cobre); animation:pulso 2.4s ease-in-out infinite}
+@keyframes pulso{50%{opacity:.35}}
+.hero-in{position:relative; max-width:1200px; margin:0 auto; padding:60px 20px; width:100%}
+@media(min-width:900px){.hero-in{padding:60px 64px}}
+.hero h1{font-weight:800; font-size:clamp(2.5rem,7vw,4.5rem); max-width:13ch; letter-spacing:-.03em}
+.hero h1 .sub-cobre{position:relative; white-space:nowrap}
+.hero h1 .sub-cobre::after{content:""; position:absolute; left:0; right:0; bottom:.04em; height:2px; background:var(--cobre); transform:scaleX(0); transform-origin:left; animation:subrayar .6s var(--ease) .5s forwards}
+@keyframes subrayar{to{transform:scaleX(1)}}
+.hero .baja{margin-top:22px; color:var(--luna); max-width:46ch; font-size:1.05rem}
+.hero-ctas{margin-top:34px; display:flex; gap:14px; flex-wrap:wrap}
+.lecturas{margin-top:48px; display:flex; gap:44px; flex-wrap:wrap}
+.lecturas .l b{display:block; font-size:1.7rem; font-weight:600; color:var(--cobre); font-family:var(--sans)}
+.lecturas .l span{font-size:.64rem; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--luna)}
+
+/* ===== Barra de cuidado (servicio personalizado) ===== */
+.care{background:var(--abisal); border-top:1px solid var(--linea); border-bottom:1px solid var(--linea)}
+.care-in{max-width:1200px; margin:0 auto; padding:26px 20px; display:grid; grid-template-columns:repeat(3,1fr); gap:28px}
+@media(min-width:900px){.care-in{padding:26px 64px}}
+@media(max-width:760px){.care-in{grid-template-columns:1fr; gap:18px}}
+.care .c .label{display:block; margin-bottom:5px; color:var(--cobre)}
+.care .c p{font-size:.95rem; color:var(--luna); line-height:1.5}
+.care .c a{color:var(--marfil); text-decoration:underline; text-underline-offset:3px}
+
+/* ===== Rosa de Rumbo WP-02 ===== */
+.rosa-sec{text-align:center}
+.rosa-box{position:relative; width:min(320px,84vw); aspect-ratio:1; margin:36px auto 10px; touch-action:none; cursor:grab}
+.rosa-box:active{cursor:grabbing}
+/* En pantalla táctil el dial ocupaba casi todo el alto y con touch-action:none se comía el scroll:
+   el dedo giraba la aguja en vez de bajar la página. Ahí no se arrastra, se elige tocando. */
+@media(pointer:coarse){.rosa-box{touch-action:pan-y; cursor:default} .rosa-box:active{cursor:default}}
+/* En celular el dial es el indicador, no el protagonista: achicado entran los dos pasos y el
+   resultado sin scrollear tres pantallas. */
+@media(max-width:640px){
+  .rosa-box{width:min(230px,58vw); margin:18px auto 6px}
+  .rosa-sec h1{font-size:clamp(1.5rem,6.6vw,2rem)}
+  .paso{margin:18px 0 8px}
+  .grados{font-size:1.4rem}
+  .meses-chips{margin-top:10px}
+  .resultado{margin-top:18px}
+}
+.paso{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--luna);margin:26px 0 10px;font-weight:600}
+.paso b{color:var(--cobre);font-weight:600}
+.resultado{margin:28px auto 0;max-width:520px;background:var(--abisal);border:1px solid var(--linea);border-left:3px solid var(--cobre);
+ border-radius:0 12px 12px 0;padding:16px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;text-align:left}
+.resultado .n{font:700 2rem/1 Manrope,inherit;color:var(--cobre);font-variant-numeric:tabular-nums}
+.resultado .q{font-size:.9rem;color:var(--luna);flex:1;min-width:140px}
+.resultado .q b{color:var(--marfil);display:block;font-size:1rem}
+@media(max-width:560px){.resultado{text-align:center;flex-direction:column;gap:10px}}
+.rosa-box svg{width:100%; height:100%; overflow:visible}
+#aguja-g{transform-origin:50% 50%; transition:transform .7s cubic-bezier(.34,1.3,.64,1)}
+.rosa-box.drag #aguja-g{transition:none}
+.region-btn{position:absolute; transform:translate(-50%,-50%); background:none; border:none;
+  font-size:.66rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--luna);
+  padding:8px 10px; transition:color .2s; white-space:nowrap}
+.region-btn:hover{color:var(--marfil)}
+.region-btn.on{color:var(--cobre)}
+/* En celular los rótulos alrededor del dial se salían de la pantalla, y con más de seis salidas
+   se pisaban entre ellos. Debajo de 900px pasan a ser una fila de chips bajo el dial. */
+@media(max-width:900px){
+  #region-btns{position:static;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:14px}
+  .region-btn{position:static;transform:none;border:1px solid var(--linea);border-radius:99px;padding:7px 13px;font-size:.68rem}
+  .region-btn.on{border-color:var(--cobre)}
+}
+.grados{font-size:1.7rem; font-weight:600; color:var(--cobre)}
+.meses-chips{display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin:26px auto 0; max-width:640px}
+.chipm{background:none; border:1px solid var(--linea); color:var(--luna); border-radius:99px; padding:8px 15px; font-size:.78rem; font-weight:600; transition:all .2s}
+.chipm:hover{border-color:var(--cobre)}
+.chipm.on{border-color:var(--cobre); color:var(--cobre)}
+.rumbo-lectura{margin:26px 0 16px; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--luna)}
+.rumbo-lectura b{color:var(--cobre); font-weight:600}
+.sr-select{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+
+/* ===== Fichas curadas WP-03 ===== */
+.ficha{background:var(--abisal); border:1px solid var(--linea); border-left:4px solid var(--cobre);
+  border-radius:12px; padding:26px 28px; margin-bottom:20px;
+  display:grid; grid-template-columns:220px 1fr 220px; gap:28px; align-items:center}
+@media(max-width:900px){.ficha{grid-template-columns:1fr; gap:18px}}
+.ficha .id .label{display:block; margin-bottom:8px}
+
+/* Paquetes especiales: grilla de tarjetas con foto (escala con muchos productos) */
+.grupo-esp{margin-top:26px}
+.grupo-esp>.label{display:block;margin-bottom:14px}
+.esp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.esp{background:var(--abisal);border:1px solid var(--linea);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.esp .foto{position:relative;aspect-ratio:16/10;background:var(--azul) center/cover no-repeat;display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
+.esp .foto::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,42,67,.15) 0%,rgba(11,29,46,.88) 78%)}
+.esp .foto>*{position:relative}
+.esp .foto .dest{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cobre);font-weight:600}
+.esp .foto h3{font-size:1.22rem;font-weight:700;margin-top:4px;line-height:1.2}
+.esp .cuerpo{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.esp .fechas{font-size:.84rem;color:var(--luna)}
+.esp .hotel{font-size:.88rem}
+.esp .precio{margin-top:auto;padding-top:12px;border-top:1px solid var(--linea)}
+.esp .precio b{display:block;font-size:1.7rem;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.esp .precio .cuo{font-size:.8rem;color:var(--luna);display:block;margin-top:2px}
+.esp .precio .base{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--luna);display:block;margin-bottom:2px}
+.esp .btn{width:100%;margin-top:12px;justify-content:center}
+.esp .mas{background:none;border:0;color:var(--cobre);font:600 .82rem inherit;cursor:pointer;padding:0;text-align:left;text-decoration:underline;text-underline-offset:3px}
+.esp .detalle{display:none;font-size:.84rem;color:var(--luna);line-height:1.55;border-top:1px solid var(--linea);padding-top:11px}
+.esp.abierta .detalle{display:block}
+.esp .detalle b{color:var(--marfil);font-weight:600;display:block;margin-bottom:3px}
+.esp .detalle p{margin-bottom:10px}
+.ficha .id.foto{position:relative; border-radius:10px; overflow:hidden; padding:18px; margin:-6px; background:var(--abisal) center/cover no-repeat; display:flex; flex-direction:column; justify-content:flex-end; min-height:200px; align-self:stretch; height:calc(100% + 12px)}
+.ficha .id.foto::before{content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(16,42,67,.35) 0%,rgba(11,29,46,.82) 70%,rgba(11,29,46,.94) 100%)}
+.ficha .id.foto>*{position:relative}
+.ficha h3{font-size:1.3rem; font-weight:700}
+.ficha .meta{font-size:.92rem; color:var(--luna); margin-top:5px}
+.sino{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+@media(max-width:560px){.sino{grid-template-columns:1fr}}
+.sino .col .label{display:block; margin-bottom:8px}
+.sino p{font-size:.92rem; color:var(--luna); line-height:1.55}
+.sino .si::before{content:"✓ "; color:var(--cobre); font-weight:700}
+.sino .no::before{content:"✕ "; color:var(--luna)}
+.precio-l .label{display:block}
+.precio-l b{display:block; font-size:2rem; font-weight:600; color:var(--cobre); margin:2px 0 6px; font-family:var(--sans)}
+.precio-l .vig{font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--luna); display:flex; align-items:center; gap:6px}
+.precio-l .vig::before{content:""; width:5px; height:5px; border-radius:50%; background:var(--cobre); animation:pulso 2.4s ease-in-out infinite}
+.precio-l .btn{margin-top:14px; width:100%}
+
+/* ===== Catálogo tabla WP-04 ===== */
+.filtros-bar{position:sticky; top:56px; z-index:30; background:rgba(16,42,67,.95);
+  backdrop-filter:blur(8px); padding:14px 0; border-bottom:1px solid var(--linea);
+  display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+.filtros-bar .contador{margin-left:auto; font-size:.72rem; letter-spacing:.1em; color:var(--luna)}
+.filtros-bar .contador b{color:var(--cobre); font-weight:600}
+.filtros-bar input,.filtros-bar select{background:var(--abisal); border:1px solid var(--linea); border-radius:99px; color:var(--marfil); padding:8px 14px; font-size:.8rem; font-family:var(--sans); outline:none}
+.filtros-bar input:focus,.filtros-bar select:focus{border-color:var(--cobre)}
+.tabla{margin-top:8px}
+.fila{border-bottom:1px solid var(--linea); content-visibility:auto; contain-intrinsic-size:auto 64px}
+.fila-top{display:grid; grid-template-columns:52px 1fr 130px 90px 70px 130px 30px; gap:10px; align-items:center;
+  padding:14px 6px; cursor:pointer; transition:background .2s}
+.fila-top:hover{background:rgba(248,244,236,.03)}
+.fila:nth-child(even) .fila-top{background:rgba(248,244,236,.02)}
+.fila:nth-child(even) .fila-top:hover{background:rgba(248,244,236,.04)}
+.fila .n{font-size:.78rem; color:var(--luna)}
+.fila .dest{font-family:var(--disp); font-weight:600; font-size:.98rem}
+.fila .reg,.fila .noc{font-size:.78rem; color:var(--luna)}
+.fila .rum{font-size:.78rem; color:var(--cobre)}
+.fila .pre{text-align:right; font-weight:600; font-size:.95rem}
+.fila .chev{color:var(--luna); text-align:center; transition:transform .24s var(--ease)}
+.fila.abierta .chev{transform:rotate(90deg)}
+.fila-det{max-height:0; overflow:hidden; transition:max-height .24s var(--ease)}
+.fila.abierta .fila-det{max-height:190px}
+.fila-det-in{padding:4px 6px 18px 62px; display:flex; gap:20px; align-items:center; flex-wrap:wrap}
+.fila-det-in p{font-size:.82rem; color:var(--luna); max-width:52ch}
+@media(max-width:820px){
+  .fila-top{grid-template-columns:1fr 110px 24px; padding:13px 4px}
+  .fila .n,.fila .reg,.fila .noc,.fila .rum{display:none}
+  .fila .dest small{display:block; font-family:var(--sans); font-weight:600; font-size:.62rem; letter-spacing:.11em; text-transform:uppercase; color:var(--luna); margin-top:3px}
+  .fila-det-in{padding-left:4px}
+}
+@media(min-width:821px){.fila .dest small{display:none}}
+.sin-rutas{display:none; text-align:center; padding:48px 20px; color:var(--luna)}
+.sin-rutas .btn{margin-top:18px}
+
+/* ===== Secciones documento (marfil) ===== */
+.marfil-zone{background:var(--marfil); color:var(--azul); margin-top:120px; padding:90px 0;
+  border-top:2px dashed rgba(16,42,67,.25)}
+@media(max-width:760px){.marfil-zone{margin-top:80px; padding:64px 0}}
+.marfil-zone .label{color:var(--grafito)}
+.marfil-zone h2{color:var(--azul)}
+.marfil-zone p{color:var(--grafito)}
+
+/* Simulador boleta */
+.sim-grid{display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start}
+@media(max-width:860px){.sim-grid{grid-template-columns:1fr}}
+.sim-ctrl label{display:block; font-size:.66rem; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--grafito); margin:18px 0 6px}
+.sim-ctrl input,.sim-ctrl select{width:100%; background:#fff; border:1.5px solid var(--linea-marfil); border-radius:12px; padding:12px 15px; font-size:.95rem; font-family:var(--sans); color:var(--azul); outline:none}
+.sim-ctrl input:focus{border-color:var(--cobre)}
+.sim-ctrl input[type=range]{padding:0; border:none; accent-color:var(--cobre); height:34px}
+.boleta{background:#fff; border:1px solid var(--linea-marfil); border-radius:14px; padding:34px 30px; position:relative; box-shadow:0 6px 24px rgba(16,42,67,.07)}
+.sello{position:absolute; top:-26px; right:22px; width:104px; height:104px; transform:rotate(-8deg)}
+.boleta .bl{display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid var(--linea-marfil); font-size:.9rem; color:var(--grafito)}
+.boleta .bl b{color:var(--azul); font-weight:600}
+.boleta .bl.big b{font-size:1.5rem; color:var(--cobre-prof)}
+.boleta .vig{margin-top:14px; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--grafito)}
+.boleta .btn{width:100%; margin-top:22px}
+.boleta .nota{font-size:.74rem; color:var(--grafito); margin-top:12px; line-height:1.55}
+
+/* Videollamada */
+.meet-grid{display:grid; grid-template-columns:180px 1fr; gap:44px; align-items:center; max-width:860px; margin:0 auto}
+@media(max-width:700px){.meet-grid{grid-template-columns:1fr; text-align:center}}
+.meet-grid svg{width:150px; height:150px; margin:0 auto}
+.slots{display:flex; gap:10px; flex-wrap:wrap; margin-top:20px}
+@media(max-width:700px){.slots{justify-content:center}}
+.slot{background:none; border:1px solid var(--linea); border-radius:10px; color:var(--marfil); padding:10px 16px; font-size:.82rem; font-weight:500; transition:all .2s}
+.slot:hover,.slot.on{border-color:var(--cobre); color:var(--cobre)}
+
+/* Verificación */
+.sellos3{display:grid; grid-template-columns:repeat(3,1fr); gap:36px; margin-top:44px}
+@media(max-width:760px){.sellos3{grid-template-columns:1fr}}
+.sello3{text-align:center}
+.sello3 svg{width:96px; height:96px; margin-bottom:14px}
+.sello3 b{display:block; font-family:var(--disp); font-weight:700; color:var(--azul); font-size:1rem}
+.sello3 p{font-size:.82rem; margin-top:6px}
+.legal-tabla{margin-top:44px; border-top:1px solid var(--linea-marfil); max-width:760px}
+.legal-tabla .lt{display:flex; justify-content:space-between; gap:20px; padding:11px 0; border-bottom:1px solid var(--linea-marfil); font-size:.9rem; color:var(--grafito); flex-wrap:wrap}
+.legal-tabla .lt b{color:var(--azul); font-weight:600}
+.legal-tabla a{color:var(--cobre-prof); font-weight:600}
+.tacha{position:relative}
+.tacha::after{content:""; position:absolute; left:-2%; right:-2%; top:52%; height:2px; background:var(--cobre); transform:rotate(-2deg)}
+
+/* Footer */
+footer{background:var(--abisal); border-top:1px solid var(--linea); margin-top:0; padding:60px 20px 90px}
+.foot{max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:36px}
+@media(min-width:900px){footer{padding:60px 64px 90px}}
+@media(max-width:760px){.foot{grid-template-columns:1fr}}
+.foot .label{display:block; margin-bottom:12px}
+.foot ul{list-style:none; display:flex; flex-direction:column; gap:8px; font-size:.85rem; color:var(--luna)}
+.foot p{font-size:.78rem; color:var(--luna); line-height:1.7; margin-top:10px}
+.fin{grid-column:1/-1; text-align:center; margin-top:36px; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--grafito)}
+
+/* Línea de rumbo (desktop) */
+#ruta{position:fixed; left:18px; top:0; height:100vh; width:40px; z-index:5; display:none; pointer-events:none}
+@media(min-width:1180px){#ruta{display:block}}
+#ruta line{stroke:var(--linea); stroke-width:1.5}
+#ruta line.prog{stroke:var(--cobre)}
+#ruta circle{fill:var(--azul); stroke:var(--linea); stroke-width:1.5}
+#ruta circle.ok{fill:var(--cobre); stroke:var(--cobre)}
+
+/* WhatsApp persistente */
+.wa-fab{position:fixed; right:22px; bottom:22px; z-index:60; width:56px; height:56px; border-radius:50%;
+  background:var(--cobre-accion); display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 32px rgba(0,0,0,.45); transition:transform .3s var(--ease)}
+.wa-fab:hover{transform:translateY(-3px)}
+.wa-fab svg{width:26px; height:26px; fill:var(--marfil)}
+.wa-bar{display:none}
+@media(max-width:640px){
+  .wa-fab{display:none}
+  .wa-bar{display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60; background:var(--cobre-accion);
+    color:var(--marfil); font-family:var(--disp); font-weight:600; font-size:1rem; padding:16px;
+    padding-bottom:calc(16px + env(safe-area-inset-bottom)); align-items:center; justify-content:center; gap:10px;
+    transform:translateY(110%); transition:transform .25s var(--ease)}
+  .wa-bar.ver{transform:none}
+  .wa-bar svg{width:20px; height:20px; fill:var(--marfil)}
+  footer{padding-bottom:150px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important; transition:none!important}
+  html{scroll-behavior:auto}
+  #aguja-g{transition:none!important}
+}
+</style>
+<noscript><style>.fila-det{max-height:none}.hero h1 .sub-cobre::after{transform:none}</style></noscript>
+</head>
+<body>
+
+<svg id="ruta" aria-hidden="true">
+  <line x1="20" y1="0" x2="20" y2="3000"/>
+  <line class="prog" x1="20" y1="0" x2="20" y2="3000" id="ruta-prog"/>
+</svg>
+
+<header>
+  <div class="hd">
+    <a class="brand" href="#">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="#F8F4EC" stroke-width="4"/><line x1="50" y1="8" x2="50" y2="17" stroke="#F8F4EC" stroke-width="4"/><line x1="50" y1="50" x2="75" y2="18" stroke="#B87333" stroke-width="5.5" stroke-linecap="round"/><circle cx="50" cy="50" r="4.5" fill="#F8F4EC"/></svg>
+      AZIMUT
+    </a>
+    <nav>
+      <a href="#especiales">Paquetes</a>
+      <a href="#meet">Videollamada</a>
+    </nav>
+    <span class="lectura num">BUE 34.6°S 58.4°W · <span id="reloj">--:--</span> ART</span>
+    <a class="btn ghost sm" data-wa="Hola! Quiero info sobre un viaje. · ref NAV" data-ctx="nav">WhatsApp</a>
+  </div>
+</header>
+
+<!-- HERO = LA BRÚJULA -->
+<section class="rosa-sec wrap" id="rosa" data-wp="1" style="padding-top:40px">
+  <span class="label cobre wp">Azimut · Tu viaje, con rumbo verificado</span>
+  <h1 style="font-size:clamp(1.8rem,4.2vw,2.9rem);font-weight:700">¿Hacia dónde apunta tu aguja?</h1>
+  <p style="color:var(--luna);font-size:1rem;margin-top:8px;max-width:56ch;margin-left:auto;margin-right:auto">Dos toques y te mostramos lo que hay, sin formularios. <b style="color:var(--marfil)">A nosotros no nos pagás nada:</b> el viaje te lo factura el operador. Nosotros garantizamos los papeles y gestionamos todo.</p>
+  <span class="paso"><b>1</b> · ¿A dónde querés ir?</span>
+  <div class="rosa-box" id="rosa-box">
+    <svg viewBox="0 0 320 320" id="rosa-svg" aria-hidden="true">
+      <circle cx="160" cy="160" r="140" fill="none" stroke="rgba(248,244,236,.25)" stroke-width="1.5"/>
+      <g id="ticks"></g>
+      <g id="aguja-g">
+        <line x1="160" y1="160" x2="160" y2="36" stroke="#B87333" stroke-width="3" stroke-linecap="round"/>
+        <line x1="160" y1="160" x2="160" y2="196" stroke="#4A5568" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <circle cx="160" cy="160" r="6" fill="#F8F4EC"/>
+    </svg>
+    <div id="region-btns"></div>
+  </div>
+  <div class="grados num" id="grados">038°</div>
+  <select class="sr-select" id="sr-region" aria-label="Elegí tu salida grupal">
+    <option value="">Todas las salidas</option>
+  </select>
+  <span class="paso"><b>2</b> · ¿Cuándo?</span>
+  <div class="meses-chips" id="meses-chips"></div>
+  <div class="resultado" id="resultado">
+    <span class="n" id="res-n">0</span>
+    <span class="q" id="res-q"><b>paquetes para ese rumbo</b>Tocá un destino y una fecha para achicar la búsqueda.</span>
+    <button class="btn sm" onclick="verPaquetes()">Ver los paquetes</button>
+  </div>
+  <p class="rumbo-lectura">Rumbo elegido: <b id="rumbo-txt">TODOS · 038° · CUANDO SEA</b> &nbsp;·&nbsp; <button class="chipm" type="button" onclick="resetRumbo()">Ver todo</button></p>
+</section>
+
+<!-- SALIDAS GRUPALES publicadas desde el panel (oculta si no hay ninguna) -->
+<section class="wrap" id="grupales" data-wp="2" style="display:none">
+  <span class="label cobre wp">Salidas grupales · cupos confirmados</span>
+  <div id="grupales-fichas" style="margin-top:18px"></div>
+  <p class="label" id="sin-grupales" style="display:none;margin-top:14px">Sin salidas grupales para ese rumbo — <a data-wa="Hola! No encontré salida grupal para mi rumbo. ¿Me arman una? · ref GRP-CUSTOM" data-ctx="grupal_custom" style="text-decoration:underline;cursor:pointer;color:var(--marfil)">pedinos la tuya</a> o mirá las rutas de abajo.</p>
+</section>
+
+<!-- PAQUETES ESPECIALES (generados por la consola: site/productos.js) -->
+<section class="wrap" id="especiales" data-wp="3" style="display:none">
+  <span class="label cobre wp">Paquetes especiales · precio del operador, en cuotas</span>
+  <p style="color:var(--luna);font-size:.95rem;margin-top:8px;max-width:60ch">Aéreo, hotel, traslados y asistencia. El precio que ves es el final por persona, y te decimos qué NO incluye antes de que preguntes. Se pagan en cuotas fijas en dólares, sin financiación con tarjeta.</p>
+  <div id="especiales-fichas" style="margin-top:18px"></div>
+</section>
+
+<!-- Barra de cuidado: el servicio ES el producto -->
+<div class="care" aria-label="Cómo te atendemos" style="margin-top:64px">
+  <div class="care-in">
+    <div class="c"><span class="label">Una persona, no un turno</span><p>Te atiende siempre la misma persona, con nombre — desde la primera consulta hasta que volvés.</p></div>
+    <div class="c"><span class="label">Respuesta en minutos</span><p>De 9 a 21 respondemos en minutos, no "a la brevedad". Fuera de horario, te decimos exactamente cuándo.</p></div>
+    <div class="c"><span class="label">Cara a cara cuando quieras</span><p><a href="#meet">Videollamada de 15 minutos</a>, gratis, antes de que pagues nada. Traé las preguntas incómodas.</p></div>
+  </div>
+</div>
+
+<!-- SIMULADOR (marfil) -->
+<!-- El simulador de seña se retiró: Azimut no cobra la seña. La cobra el operador. -->
+
+<!-- WP-06 VIDEOLLAMADA -->
+<section class="wrap" id="meet" data-wp="5">
+  <div class="meet-grid">
+    <svg viewBox="0 0 150 150" aria-hidden="true">
+      <circle cx="75" cy="75" r="62" fill="none" stroke="rgba(248,244,236,.2)" stroke-width="1.5"/>
+      <line x1="75" y1="75" x2="112" y2="30" stroke="#B87333" stroke-width="2"/>
+      <line x1="75" y1="75" x2="52" y2="108" stroke="#A9B4C2" stroke-width="2"/>
+      <circle cx="75" cy="75" r="4" fill="#F8F4EC"/>
+      <circle cx="112" cy="30" r="4" fill="none" stroke="#B87333" stroke-width="2"/>
+    </svg>
+    <div>
+      <span class="label cobre wp">Videollamada</span>
+      <h2 style="font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:700">Quince minutos con un humano que ya fue.</h2>
+      <p style="color:var(--luna);margin-top:10px;max-width:48ch">Gratis, sin compromiso y sin guion de venta. Traé las preguntas incómodas — para eso es.</p>
+      <div class="slots" id="slots">
+        <button class="slot num" data-s="mañana 11:00">MAÑANA · 11:00 ART</button>
+        <button class="slot num" data-s="mañana 18:30">MAÑANA · 18:30 ART</button>
+        <button class="slot num" data-s="pasado mañana 10:00">PASADO · 10:00 ART</button>
+      </div>
+      <a class="btn" style="margin-top:22px" id="btn-meet" data-wa="Hola! Quiero agendar una videollamada de 15 min para hablar de mi viaje. · ref MEET" data-ctx="meet">Agendar esta llamada</a>
+    </div>
+  </div>
+</section>
+
+<!-- WP-07 VERIFICACIÓN (marfil) -->
+<div class="marfil-zone" id="verificacion" data-wp="6" style="margin-top:64px">
+  <div class="wrap">
+    <span class="label wp" style="color:var(--cobre-prof)">Puerto</span>
+    <h2 style="font-size:clamp(1.7rem,3.6vw,2.6rem);font-weight:700">Nosotros garantizamos y gestionamos.<br>El viaje te lo factura el operador.</h2>
+    <p style="margin:14px 0 0;max-width:62ch">A nosotros no nos pagás nada. Le comprás directo al operador mayorista, que es quien te factura y quien te cobra. Nuestro trabajo es elegir bien, revisar cada papel antes de que pagues, y estar del otro lado del teléfono el día que algo se complique. Cobramos una comisión del operador. Contra reservar solo y <span class="tacha">equivocarte</span>.</p>
+    <div class="sellos3">
+      <div class="sello3">
+        <svg viewBox="0 0 96 96"><circle cx="48" cy="48" r="42" fill="none" stroke="#102A43" stroke-width="2"/><text x="48" y="42" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#102A43">01</text><text x="48" y="60" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#B87333">ELEGIR</text></svg>
+        <b>Elegimos por vos</b><p>Miramos los programas de varios operadores y publicamos los que pondríamos a un familiar. El precio es el del operador, a la vista, sin pedirte los datos.</p>
+      </div>
+      <div class="sello3">
+        <svg viewBox="0 0 96 96"><circle cx="48" cy="48" r="42" fill="none" stroke="#102A43" stroke-width="2"/><text x="48" y="42" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#102A43">02</text><text x="48" y="60" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#B87333">GARANTIA</text></svg>
+        <b>Garantizamos los papeles</b><p>El nombre y el CUIT del operador van en cada ficha para que lo verifiques vos. Revisamos con vos que estén todos los papeles antes de que pagues un peso.</p>
+      </div>
+      <div class="sello3">
+        <svg viewBox="0 0 96 96"><circle cx="48" cy="48" r="42" fill="none" stroke="#102A43" stroke-width="2"/><text x="48" y="42" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#102A43">03</text><text x="48" y="60" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#B87333">GESTION</text></svg>
+        <b>Gestionamos todo</b><p>Reserva, pagos, cambios y el problema del día 3 en Río. Te atiende siempre la misma persona, con nombre, antes, durante y después.</p>
+      </div>
+    </div>
+    <div class="legal-tabla num">
+      <div class="lt"><span>Qué somos</span><b>Agencia de viajes que trabaja con operadores mayoristas. <em style="font-weight:400">No organizamos el viaje ni cobramos tu plata: le pagás al operador, que es quien te factura.</em></b></div>
+      <div class="lt"><span>Registro Nacional de Agencias de Viajes (FAEVYT, privado)</span><b><a href="https://agenciasdeviajes.ar/" target="_blank" rel="noopener">Inscripción en trámite — verificala →</a></b></div>
+      
+      <div class="lt"><span>Antes de pagar un peso</span><b><a href="/papeles.html">Papeles antes que Plata — los 5 que te damos, siempre →</a></b></div>
+      <div class="lt"><span>Tus derechos</span><b><a href="#arrepentimiento">Botón de arrepentimiento</a> · <a href="#privacidad">Privacidad (Ley 25.326)</a> · <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor" target="_blank" rel="noopener">Defensa del Consumidor</a></b></div>
+      <div class="lt" id="arrepentimiento"><span><b>Botón de arrepentimiento</b></span><b style="font-weight:400">Podés revocar tu compra dentro de los 10 días corridos (art. 34, Ley 24.240 y Res. 424/2020). Escribinos por WhatsApp al xx 1241 24xx 1243 y lo tramitamos con el operador, que es quien te cobró y quien te devuelve. Te acompañamos hasta que la devolución esté hecha.</b></div>
+      <div class="lt" id="privacidad"><span><b>Privacidad</b></span><b style="font-weight:400">Tus datos se usan solo para gestionar tu viaje y nunca se venden (Ley 25.326). Podés pedir acceso, corrección o baja cuando quieras por WhatsApp; autoridad de control: AAIP.</b></div>
+      <div class="lt"><span>Nota</span><b style="font-weight:400">Imágenes ilustrativas. Azimut asesora y gestiona; el viaje lo vende y lo factura el operador mayorista, cuyo nombre y CUIT figuran en cada ficha.</b></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot">
+    <div>
+      <a class="brand" href="#" style="font-size:1rem">
+        <svg viewBox="0 0 100 100" style="width:22px;height:22px" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="#F8F4EC" stroke-width="4"/><line x1="50" y1="50" x2="75" y2="18" stroke="#B87333" stroke-width="5.5" stroke-linecap="round"/></svg>
+        AZIMUT VIAJES
+      </a>
+      <p>Te atiende siempre la misma persona — antes, durante y después del viaje. Garantizamos los papeles y gestionamos todo; el viaje lo factura el operador. Precios del operador en USD, sujetos a disponibilidad y confirmación.</p>
+    </div>
+    <div>
+      <span class="label">Carta</span>
+      <ul><li><a href="#especiales">Paquetes</a></li><li><a href="#meet">Videollamada</a></li><li><a href="/papeles.html"><b>Papeles antes que Plata</b></a></li></ul>
+    </div>
+    <div>
+      <span class="label">Contacto</span>
+      <ul><li><a data-wa="Hola! Quiero info sobre un viaje. · ref FOOTER" data-ctx="footer">WhatsApp xx 1241 24xx 1243</a></li><li>Buenos Aires, Argentina</li></ul>
+    </div>
+    <div class="fin">Azimut Viajes · 34.6°S 58.4°W · Fin de la carta</div>
+  </div>
+</footer>
+
+<a class="wa-fab" data-wa="Hola! Quiero info sobre un viaje. · ref FAB" data-ctx="fab" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.7 6L4 29l8.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.7-.3-.4C5.5 17.8 5 16.4 5 15 5 9 9.9 4 16 4s11 4.9 11 11-4.9 10-11 10z"/></svg>
+</a>
+<a class="wa-bar" id="wa-bar" data-wa="Hola! Quiero info sobre un viaje. · ref BARRA" data-ctx="barra_movil">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.7 6L4 29l8.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
+  Escribinos — respondemos hoy
+</a>
+
+<script src="productos.js"></script>
+<script>
+// ===== Config =====
+const WA_NUM='xx124124xx1243', SENA=0.30;
+// La rosa apunta a las 6 salidas REALES: posición pareja en el dial, rumbo verdadero desde Buenos Aires en la lectura
+// Rumbo real desde Buenos Aires hacia cada destino publicado. Si aparece uno nuevo, la lectura
+// cae en 45° hasta que se lo agregue acá: es un dato, no se inventa por destino.
+const RUMBOS={'Río de Janeiro':52,'Angra dos Reis':50,'Búzios':54,'Punta del Este':66,'Sur de Italia y Puglia':55,
+ 'Europa — Gran Tour':35,'Egipto y Playas':68,'España y Portugal':40,'Auroras Boreales':33,'Países del Este':42};
+// Un punto por destino, repartidos parejo alrededor del dial: dos salidas al mismo lugar no lo duplican.
+const DIAL=(typeof DESTINOS!=='undefined'?DESTINOS:[]).map((d,i,a)=>({
+  cod:d.destino, corto:d.destino, ang:(20+i*(360/Math.max(a.length,1)))%360,
+  real:RUMBOS[d.destino]||45, completa:false, ids:d.ids}));
+const REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
+window.dataLayer=window.dataLayer||[];
+const track=(e,d)=>dataLayer.push(Object.assign({event:e},d||{}));
+const waUrl=m=>'https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(m);
+function waGo(msg,ctx){track('wa_click',{wa_context:ctx||'general'});const w=window.open(waUrl(msg),'_blank');if(!w)location.href=waUrl(msg)}
+document.querySelectorAll('[data-wa]').forEach(a=>{
+  a.href=waUrl(a.dataset.wa); a.target='_blank'; a.rel='noopener';
+  a.addEventListener('click',()=>track('wa_click',{wa_context:a.dataset.ctx||'general'}));
+});
+
+// ===== Reloj instrumento =====
+function reloj(){const d=new Date();document.getElementById('reloj').textContent=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')}
+reloj();setInterval(reloj,20000);
+
+// ===== Rosa de Rumbo =====
+let bearing=38, regionSel='', mesSel='';
+const agujaG=document.getElementById('aguja-g'), gradosEl=document.getElementById('grados');
+// ticks
+(function(){const g=document.getElementById('ticks');let h='';
+  for(let a=0;a<360;a+=5){const may=a%30===0,r1=140,r2=may?129:134;
+    const rad=(a-90)*Math.PI/180,c=Math.cos(rad),s=Math.sin(rad);
+    h+=`<line x1="${160+r1*c}" y1="${160+r1*s}" x2="${160+r2*c}" y2="${160+r2*s}" stroke="rgba(248,244,236,${may?'.5':'.18'})" stroke-width="${may?1.6:1}"/>`;}
+  ['N','E','S','O'].forEach((t,i)=>{const rad=(i*90-90)*Math.PI/180;
+    h+=`<text x="${160+114*Math.cos(rad)}" y="${160+114*Math.sin(rad)+4}" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#A9B4C2">${t}</text>`;});
+  g.innerHTML=h;})();
+// botones de salida alrededor del dial
+(function(){const box=document.getElementById('region-btns'),sr=document.getElementById('sr-region');
+  DIAL.forEach(d=>{
+    const rad=(d.ang-90)*Math.PI/180, x=50+56*Math.cos(rad), y=50+56*Math.sin(rad);
+    const b=document.createElement('button');
+    b.className='region-btn'; b.dataset.r=d.cod; b.style.left=x+'%'; b.style.top=y+'%';
+    b.textContent=d.corto+(d.completa?' ✕':''); b.setAttribute('role','radio');
+    if(d.completa)b.title='Salida completa — lista de espera';
+    b.addEventListener('click',()=>setRumbo(d.cod));
+    box.appendChild(b);
+    const o=document.createElement('option');o.value=d.cod;o.textContent=d.corto;sr.appendChild(o);
+  });
+  sr.addEventListener('change',()=>setRumbo(sr.value||''));
+})();
+function setRumbo(cod){
+  regionSel=cod;
+  const d=DIAL.find(x=>x.cod===cod);
+  bearing=d?d.ang:38;
+  agujaG.style.transform=`rotate(${bearing}deg)`;
+  animarGrados(d?d.real:38);
+  document.querySelectorAll('.region-btn').forEach(b=>b.classList.toggle('on',b.dataset.r===cod));
+  document.getElementById('sr-region').value=cod;
+  actualizarLectura(); filtrar();
+  track('rosa_rumbo',{salida:cod||'todas'});
+}
+function animarGrados(target){
+  const fin=()=>gradosEl.textContent=String(Math.round(target)).padStart(3,'0')+'°';
+  if(REDUCED||document.hidden){fin();return}
+  const start=parseInt(gradosEl.textContent)||0,t0=performance.now();
+  (function paso(t){const p=Math.min((t-t0)/600,1),e=1-Math.pow(1-p,3);
+    gradosEl.textContent=String(Math.round(start+(target-start)*e)).padStart(3,'0')+'°';
+    if(p<1)requestAnimationFrame(paso);})(performance.now());
+  setTimeout(fin,660); // garantía: el valor final siempre queda escrito
+}
+// Arrastrar la aguja es un gesto de escritorio. En táctil compite con el scroll y no se usa.
+const TACTIL=matchMedia('(pointer:coarse)').matches;
+(function(){if(TACTIL)return;const box=document.getElementById('rosa-box');let dragging=false;
+  const ang=e=>{const r=box.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
+    const p=e.touches?e.touches[0]:e;
+    return (Math.atan2(p.clientX-cx,-(p.clientY-cy))*180/Math.PI+360)%360;};
+  box.addEventListener('pointerdown',e=>{if(e.target.closest('.region-btn'))return;dragging=true;box.classList.add('drag')});
+  addEventListener('pointermove',e=>{if(!dragging)return;bearing=ang(e);
+    agujaG.style.transform=`rotate(${bearing}deg)`;
+    gradosEl.textContent=String(Math.round(bearing)).padStart(3,'0')+'°';});
+  addEventListener('pointerup',()=>{if(!dragging)return;dragging=false;box.classList.remove('drag');
+    let best='',bd=361;DIAL.forEach(d=>{const df=Math.min(Math.abs(d.ang-bearing),360-Math.abs(d.ang-bearing));if(df<bd){bd=df;best=d.cod}});
+    setRumbo(best);});
+})();
+// meses (desde las salidas grupales reales)
+(function(){const box=document.getElementById('meses-chips');
+  const L=m=>{const[a,mm]=m.split('-');return ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'][+mm-1]+' '+a};
+  const meses=[...new Set((typeof PRODUCTOS!=='undefined'?PRODUCTOS:[]).map(p=>p.mes))].sort();
+  const todos=document.createElement('button');todos.type='button';todos.className='chipm on';todos.textContent='Cuando sea';todos.dataset.m='';
+  box.appendChild(todos);
+  meses.forEach(m=>{
+    const b=document.createElement('button');b.type='button';b.className='chipm';b.dataset.m=m;
+    b.textContent=L(m);box.appendChild(b);
+  });
+  box.addEventListener('click',e=>{const b=e.target.closest('.chipm');if(!b)return;
+    mesSel=b.dataset.m;
+    box.querySelectorAll('.chipm').forEach(x=>x.classList.toggle('on',x===b));
+    actualizarLectura(); filtrar();});
+})();
+function actualizarLectura(){
+  const ms=mesSel?document.querySelector(`.chipm[data-m="${mesSel}"]`).textContent.toUpperCase():'CUANDO SEA';
+  const d=DIAL.find(x=>x.cod===regionSel);
+  document.getElementById('rumbo-txt').textContent=
+    `${d?d.corto.toUpperCase():'TODAS LAS SALIDAS'} · ${String(d?d.real:38).padStart(3,'0')}° · ${ms}`;
+}
+function resetRumbo(){
+  mesSel='';verTodas=false;
+  document.querySelectorAll('.chipm[data-m]').forEach(x=>x.classList.toggle('on',x.dataset.m===''));
+  const fm=document.getElementById('f-mes'); if(fm)fm.value='';
+  const fq=document.getElementById('f-q'); if(fq)fq.value='';
+  setRumbo('');
+}
+
+// ===== Salidas grupales publicadas (las administra el panel; si no hay ninguna, la sección no aparece) =====
+function renderGrupales(){
+  const sec=document.getElementById('grupales'),box=document.getElementById('grupales-fichas');
+  if(!sec||!box||typeof PRODUCTOS==='undefined')return;
+  const lista=PRODUCTOS.filter(p=>p.tipo==='grupal'&&(!regionSel||p.destino===regionSel)&&(!mesSel||p.mes===mesSel));
+  if(!PRODUCTOS.some(p=>p.tipo==='grupal')){sec.style.display='none';return}
+  sec.style.display='';box.innerHTML='';
+  lista.forEach(g=>{
+    const el=document.createElement('article');el.className='ficha';
+    el.innerHTML=`
+      <div class="id${g.img?' foto':''}"${g.img?` style="background-image:url('${g.img}')"`:''}><span class="label num">Salida grupal</span>
+        <h3>${g.titulo}</h3>
+        <div class="meta num">${g.salidaLabel}${g.regreso?' → '+g.regreso.split('-').reverse().join('/'):''} · ${g.noches} noches${g.aerolinea?' · '+g.aerolinea:''} · desde Buenos Aires</div></div>
+      <div class="sino" style="grid-template-columns:1fr">
+        <div class="col"><span class="label" style="color:var(--cobre)">Recorrido</span>
+        <p style="color:var(--luna);font-size:.85rem;line-height:1.55">${g.recorrido||g.paraQuienSi}</p></div>
+      </div>
+      <div class="precio-l num"><span class="label">Desde · p/p base doble</span>
+        <b>USD ${g.precio.total.toLocaleString('es-AR')}</b>
+        <span class="vig">${g.precio.impuestos?'+ USD '+g.precio.impuestos+' imp. · ':''}precio del operador, vigencia a confirmar</span>
+        <button class="btn sm" onclick="waEspecial('${g.id}')">Quiero mi lugar</button>
+        <span style="display:block;font-size:.72rem;color:var(--luna);margin-top:8px">${g.operador?'Operador: '+g.operador:'Te atiende siempre la misma persona, de punta a punta.'}</span></div>`;
+    box.appendChild(el);
+  });
+  const sg=document.getElementById('sin-grupales'); if(sg)sg.style.display=lista.length?'none':'block';
+}
+
+// ===== Paquetes especiales (site/productos.js, generado por la consola) =====
+function renderEspeciales(){
+  const sec=document.getElementById('especiales'),box=document.getElementById('especiales-fichas');
+  if(!sec||!box||typeof PRODUCTOS==='undefined'||!PRODUCTOS.length)return;
+  sec.style.display='';
+  // Se agrupan por fecha de salida: el que busca Navidad no quiere ver Año Nuevo mezclado.
+  const lista=PRODUCTOS.filter(p=>p.tipo!=='grupal'&&(!regionSel||p.destino===regionSel)&&(!mesSel||p.mes===mesSel));
+  if(!lista.length){box.innerHTML='<p class="label">Sin paquetes para ese rumbo. <a onclick="resetRumbo()" style="text-decoration:underline;cursor:pointer;color:var(--marfil)">Ver todos</a></p>';return}
+  const grupos=[];
+  lista.forEach(p=>{
+    const clave=p.titulo.split(' en ')[0];
+    let g=grupos.find(g=>g.clave===clave);
+    if(!g){g={clave,salida:p.salidaLabel,items:[]};grupos.push(g)}
+    g.items.push(p);
+  });
+  box.innerHTML=grupos.map(g=>`
+    <div class="grupo-esp">
+      <span class="label cobre">${g.clave} · salida ${g.salida} · ${g.items.length} destino${g.items.length>1?'s':''}</span>
+      <div class="esp-grid">${g.items.map(tarjetaEsp).join('')}</div>
+    </div>`).join('');
+}
+function tarjetaEsp(p){
+  const reg=p.regreso?p.regreso.split('-').reverse().join('/')+(p.regresoConfirmado?'':' (est.)'):'';
+  return `<article class="esp" id="esp-${p.id}">
+    <div class="foto"${p.img?` style="background-image:url('${p.img}')"`:''}>
+      <span class="dest">${p.destino}</span><h3>${p.titulo}</h3></div>
+    <div class="cuerpo">
+      <div class="fechas num">${p.salidaLabel}${reg?' → '+reg:''} · ${p.noches} noches · ${p.aerolinea}${p.vueloDirecto?' · vuelo directo':''}</div>
+      <div class="hotel">${p.hotel}<br><span style="color:var(--luna);font-size:.82rem">Régimen: ${String(p.regimen).toLowerCase()} · traslados y asistencia incluidos</span></div>
+      <button class="mas" onclick="verMas('${p.id}')">Ver qué incluye y qué no</button>
+      <div class="detalle">
+        <b>Incluye</b><p>${p.incluye.join(' · ')}.</p>
+        <b>No incluye</b><p>${p.noIncluye.join(' · ')}.</p>
+        <b>Para quién sí</b><p>${p.paraQuienSi}</p>
+        <b>Para quién no</b><p>${p.paraQuienNo}</p>
+      </div>
+      <div class="precio num">
+        <span class="base">Final · por persona · base ${p.precio.base}</span>
+        <b>USD ${p.precio.total.toLocaleString('es-AR')}</b>
+        <span class="cuo">${p.precio.cuotas} cuotas de USD ${p.precio.cuota.toLocaleString('es-AR')}, que le pagás al operador${p.precio.validez&&!String(p.precio.validez).startsWith('[A')?' · vigente hasta '+p.precio.validez:' · vigencia a confirmar con el operador'}</span>
+        <button class="btn sm" onclick="waEspecial('${p.id}')">Quiero mi lugar</button>
+      </div>
+    </div></article>`;
+}
+function verMas(id){
+  const el=document.getElementById('esp-'+id);el.classList.toggle('abierta');
+  el.querySelector('.mas').textContent=el.classList.contains('abierta')?'Ocultar el detalle':'Ver qué incluye y qué no';
+  track('esp_detalle',{producto:id});
+}
+function waEspecial(id){
+  const p=PRODUCTOS.find(x=>x.id===id);
+  waGo(`Hola! Quiero info de ${p.titulo} (${p.salidaLabel}, ${p.noches} noches, USD ${p.precio.total.toLocaleString('es-AR')} final en ${p.precio.cuotas} cuotas). ¿Me confirman disponibilidad y con qué operador se contrata? · ref ESP-${p.id}`,'especial');
+}
+// ===== Filtro (por ahora, solo el inventario real de salidas grupales) =====
+function hayGrupales(){return typeof PRODUCTOS!=='undefined'&&PRODUCTOS.some(p=>p.tipo==='grupal')}
+// El simulador promete "seña del 30% que congela el precio en USD": eso es de las salidas grupales.
+// Con los paquetes en cuotas fijas no aplica, así que si no hay grupales publicadas no se muestra.
+(function(){const on=hayGrupales();
+  [['lt-operador','flex']].forEach(([id,disp])=>{
+    const el=document.getElementById(id); if(el)el.style.display=on?disp:'none';
+  });
+})();
+function verPaquetes(){
+  const d=document.getElementById('especiales').style.display==='none'?'grupales':'especiales';
+  document.getElementById(d).scrollIntoView({behavior:REDUCED?'auto':'smooth',block:'start'});
+  track('ver_paquetes',{rumbo:regionSel||'todos',mes:mesSel||'cuando sea'});
+}
+// El panel de resultado dice, antes de bajar, cuántos paquetes hay con lo elegido.
+function actualizarResultado(){
+  if(typeof PRODUCTOS==='undefined')return;
+  const lista=PRODUCTOS.filter(p=>(!regionSel||p.destino===regionSel)&&(!mesSel||p.mes===mesSel));
+  const n=document.getElementById('res-n'),q=document.getElementById('res-q'),b=document.querySelector('#resultado .btn');
+  if(!n)return;
+  n.textContent=lista.length;
+  const dest=regionSel?regionSel:'todos los destinos';
+  const cuando=mesSel?document.querySelector(`.chipm[data-m="${mesSel}"]`).textContent.toLowerCase():'cualquier fecha';
+  q.innerHTML=lista.length
+    ?`<b>${lista.length===1?'paquete':'paquetes'} a ${dest}</b>${cuando==='cualquier fecha'?'Salidas de diciembre':'Salidas de '+cuando} · desde USD ${Math.min(...lista.map(p=>p.precio.total)).toLocaleString('es-AR')} final por persona`
+    :`<b>Nada con ese rumbo</b>Probá otro destino o pedinos el tuyo por WhatsApp.`;
+  b.style.display=lista.length?'':'none';
+}
+function filtrar(){renderGrupales();renderEspeciales();actualizarResultado()}
+filtrar();
+
+
+// El simulador de seña se retiró junto con su sección: la seña la cobra el operador, no Azimut.
+
+// ===== Slots videollamada =====
+document.querySelectorAll('.slot').forEach(s=>s.addEventListener('click',()=>{
+  document.querySelectorAll('.slot').forEach(x=>x.classList.toggle('on',x===s));
+  const btn=document.getElementById('btn-meet');
+  const msg=`Hola! Quiero agendar la videollamada de 15 min — me queda bien ${s.dataset.s}. · ref MEET`;
+  btn.href=waUrl(msg); btn.dataset.wa=msg;
+}));
+
+// ===== WhatsApp persistente con ref dinámico =====
+let seccionVisible='inicio';
+const secciones=[...document.querySelectorAll('[data-wp]')];
+const ioS=new IntersectionObserver(es=>es.forEach(en=>{
+  if(en.isIntersecting)seccionVisible=en.target.id||('wp'+en.target.dataset.wp);
+}),{threshold:.3});
+secciones.forEach(s=>ioS.observe(s));
+[document.querySelector('.wa-fab'),document.getElementById('wa-bar')].forEach(el=>{
+  el.addEventListener('click',e=>{
+    e.preventDefault();
+    waGo(`Hola! Quiero info sobre un viaje. · ref STICKY-${seccionVisible.toUpperCase()}`,'sticky_'+seccionVisible);
+  });
+});
+// barra móvil aparece tras la brújula
+const hero=document.getElementById('rosa'),waBar=document.getElementById('wa-bar');
+new IntersectionObserver(es=>es.forEach(en=>{
+  waBar.classList.toggle('ver',!en.isIntersecting);
+}),{threshold:.1}).observe(hero);
+
+// ===== Línea de rumbo =====
+(function(){
+  const svg=document.getElementById('ruta');if(!svg)return;
+  const prog=document.getElementById('ruta-prog');
+  function medir(){
+    const H=innerHeight;svg.setAttribute('viewBox',`0 0 40 ${H}`);
+    svg.querySelectorAll('circle').forEach(c=>c.remove());
+    secciones.forEach((s,i)=>{
+      const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx',20);c.setAttribute('cy',60+i*((H-140)/Math.max(secciones.length-1,1)));c.setAttribute('r',5);
+      c.dataset.i=i;svg.appendChild(c);
+    });
+    prog.setAttribute('y2',0);
+  }
+  medir();addEventListener('resize',medir);
+  let tick=false;
+  addEventListener('scroll',()=>{
+    if(tick)return;tick=true;
+    requestAnimationFrame(()=>{
+      const p=scrollY/(document.documentElement.scrollHeight-innerHeight);
+      const H=innerHeight;prog.setAttribute('y2',Math.max(p*H,0));
+      svg.querySelectorAll('circle').forEach(c=>{
+        c.classList.toggle('ok',+c.getAttribute('cy')<=p*H);
+      });
+      tick=false;
+    });
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
