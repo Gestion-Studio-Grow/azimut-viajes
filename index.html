@@ -419,11 +419,7 @@ footer{background:var(--abisal); border-top:1px solid var(--linea); margin-top:0
       <span class="label cobre wp">Videollamada</span>
       <h2 style="font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:700">Quince minutos con un humano que ya fue.</h2>
       <p style="color:var(--luna);margin-top:10px;max-width:48ch">Gratis, sin compromiso y sin guion de venta. Traé las preguntas incómodas — para eso es.</p>
-      <div class="slots" id="slots">
-        <button class="slot num" data-s="mañana 11:00">MAÑANA · 11:00 ART</button>
-        <button class="slot num" data-s="mañana 18:30">MAÑANA · 18:30 ART</button>
-        <button class="slot num" data-s="pasado mañana 10:00">PASADO · 10:00 ART</button>
-      </div>
+      <p style="color:var(--luna);font-size:.94rem;margin:18px 0 0">El día y la hora los elegimos juntos: lo arreglamos por WhatsApp en dos mensajes.</p>
       <a class="btn" style="margin-top:22px" id="btn-meet" data-wa="Hola! Quiero agendar una videollamada de 15 min para hablar de mi viaje. · ref MEET" data-ctx="meet">Agendar esta llamada</a>
     </div>
   </div>
@@ -451,7 +447,7 @@ footer{background:var(--abisal); border-top:1px solid var(--linea); margin-top:0
     </div>
     <div class="legal-tabla num">
       <div class="lt"><span>Qué somos</span><b>Agencia de viajes que trabaja con operadores mayoristas. <em style="font-weight:400">No organizamos el viaje ni cobramos tu plata: le pagás al operador, que es quien te factura.</em></b></div>
-      <div class="lt"><span>Registro Nacional de Agencias de Viajes (FAEVYT, privado)</span><b style="font-weight:400">Azimut todavía no está inscripta, y te lo decimos nosotros. Por eso el viaje te lo vende y te lo factura un operador mayorista que sí está habilitado, y su legajo lo podés <a href="https://agenciasdeviajes.ar/" target="_blank" rel="noopener">verificar vos mismo →</a></b></div>
+      <div class="lt"><span>Quién está habilitado</span><b style="font-weight:400">El viaje te lo vende y te lo factura un operador mayorista habilitado. Te pasamos su nombre y su CUIT antes de que pagues, y su legajo lo podés <a href="https://agenciasdeviajes.ar/" target="_blank" rel="noopener">verificar vos mismo →</a></b></div>
       
       <div class="lt"><span>Antes de pagar un peso</span><b><a href="/papeles.html">Papeles antes que Plata — los 5 que te damos, siempre →</a></b></div>
       <div class="lt"><span>Tus derechos</span><b><a href="#arrepentimiento">Botón de arrepentimiento</a> · <a href="#privacidad">Privacidad (Ley 25.326)</a> · <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor" target="_blank" rel="noopener">Defensa del Consumidor</a></b></div>
@@ -719,14 +715,6 @@ filtrar();
 
 
 // El simulador de seña se retiró junto con su sección: la seña la cobra el operador, no Azimut.
-
-// ===== Slots videollamada =====
-document.querySelectorAll('.slot').forEach(s=>s.addEventListener('click',()=>{
-  document.querySelectorAll('.slot').forEach(x=>x.classList.toggle('on',x===s));
-  const btn=document.getElementById('btn-meet');
-  const msg=`Hola! Quiero agendar la videollamada de 15 min — me queda bien ${s.dataset.s}. · ref MEET`;
-  btn.href=waUrl(msg); btn.dataset.wa=msg;
-}));
 
 // ===== WhatsApp persistente con ref dinámico =====
 let seccionVisible='inicio';
