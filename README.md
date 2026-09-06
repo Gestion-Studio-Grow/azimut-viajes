@@ -2,7 +2,7 @@
 
 El sitio público de la agencia: https://agencia-prueba.vercel.app
 
-Se publica solo con cada push a `main`.
+Se publica desde la consola, que sube los cambios acá y después los pone en línea.
 
 ## Qué hay acá, y qué no
 
@@ -20,7 +20,7 @@ pendientes, ni las herramientas de publicación, ni datos de trabajo. Todo eso v
 ## Cómo se cargan los paquetes
 
 En la consola, no acá: se pega el texto del mayorista, se revisa el checklist y la consola
-escribe `productos.js` y hace el push. Un push publica.
+escribe `productos.js`, lo sube acá y lo publica.
 
 ## El modelo, para no escribir de más
 
